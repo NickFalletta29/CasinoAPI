@@ -1,5 +1,5 @@
 # CasinoAPI
 
-Team Member/ID      Contribution
+Team Member/ID and Contribution
 
-#1 Nick Falletta    Created and shared the GitHub Repository
+#1 Nick Falletta - Created and shared the GitHub Repository
