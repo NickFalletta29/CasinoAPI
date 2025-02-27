@@ -6,7 +6,7 @@ Different API classes needed to be implemented in order to complete our online c
 
 #1 Nick Falletta - Created and shared the GitHub Repository, added functions within the View api classes
 
-#2 John Douglas - Assisted in the production of the API
+#2 John Douglas - Assisted in the production of the API, created model, view, and controller associated classes
 
 #3 Taylor Smith - Assisted in the production of the API, created Model and View associated classes
 
