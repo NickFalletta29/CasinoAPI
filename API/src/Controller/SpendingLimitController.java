@@ -9,5 +9,3 @@ public class SpendingLimitController {
         limit.setLimitAmount(amount);
     }
 }
-
-package Controller;
