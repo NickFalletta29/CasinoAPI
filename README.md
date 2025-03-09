@@ -8,7 +8,7 @@ Different API classes needed to be implemented in order to complete our online c
 
 #2 John Douglas - Added Function to SpendingLimitController, Spendinglimit, and SpendingLimitView
 
-#3 Taylor Smith -
+#3 Taylor Smith - Finished UserAuthController and User classes plus testing in main method.
 
 #4 Nicholas Boyle - 
 
