@@ -1,9 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/API/API.iml" filepath="$PROJECT_DIR$/API/API.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/CasinoAPI.iml" filepath="$PROJECT_DIR$/.idea/CasinoAPI.iml" />
-    </modules>
-  </component>
-</project>
+package API;
+
+// Example API class with method stubs
+public class CasinoAPI {
+    
+    // Method stub for user registration
+    public boolean registerUser(String username, String password) {
+        System.out.println("Registering user: " + username);
+        return true; // Stub implementation
+    }
+    
+    // Method stub for user login
+    public boolean loginUser(String username, String password) {
+        System.out.println("Logging in user: " + username);
+        return true; // Stub implementation
+    }
+    
+    // Method stub for placing a bet
+    public boolean placeBet(String user, double amount) {
+        System.out.println("User " + user + " placed a bet of $" + amount);
+        return true; // Stub implementation
+    }
+    
+    // Method stub for checking balance
+    public double checkBalance(String user) {
+        System.out.println("Checking balance for user: " + user);
+        return 100.0; // Stub implementation
+    }
+}
+
+package TestHarness;
+
+import API.CasinoAPI;
+
+// Test harness to exercise API methods
+public class TestHarness {
+    public static void main(String[] args) {
+        CasinoAPI api = new CasinoAPI();
+        
+        // Test user registration
+        assert api.registerUser("player1", "password123") : "Registration failed";
+        
+        // Test user login
+        assert api.loginUser("player1", "password123") : "Login failed";
+        
+        // Test placing a bet
+        assert api.placeBet("player1", 50.0) : "Bet placement failed";
+        
+        // Test checking balance
+        double balance = api.checkBalance("player1");
+        assert balance >= 0 : "Invalid balance retrieved";
+        
+        System.out.println("All tests passed successfully!");
+    }
+}
