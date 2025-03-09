@@ -10,6 +10,6 @@ Different API classes needed to be implemented in order to complete our online c
 
 #3 Taylor Smith - Added function to UserAuthController, User, Transaction, and TransactionController classes plus added tests for each in main method.
 
-#4 Nicholas Boyle - 
+#4 Nicholas Boyle - Updated .idea folder
 
 #5 Sam Bender -
