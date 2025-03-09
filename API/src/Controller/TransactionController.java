@@ -3,13 +3,49 @@ package Controller;
 import Model.Transaction;
 import Model.User;
 
-// processes transaction
 public class TransactionController {
+
+   //
     public boolean processTransaction(User user, Transaction transaction) {
-        if (user.getBalance() >= transaction.getAmount()) {
-            user.setBalance(user.getBalance() - transaction.getAmount());
-            return true; // success
+        if (transaction == null || user == null) {
+            return false; //false if input is invalid
         }
-        return false; // unsuccess
+
+        double transactionAmount = transaction.getAmount();
+
+        if (transactionAmount <= 0) {
+            return false; //false if transaction amount is negative
+        }
+
+        if (transaction.getType().equalsIgnoreCase("deposit")) {
+            return deposit(user, transactionAmount);
+        } else if (transaction.getType().equalsIgnoreCase("bet")) {
+            return placeBet(user, transactionAmount);
+        } else {
+            return false;
+        }
     }
+
+    //adds deposit to balanace
+    public boolean deposit(User user, double amount) {
+        user.setBalance(user.getBalance() + amount);
+        logTransaction(user, "Deposit", amount);
+        return true;
+    }
+
+ //as long as user balance is greater than amount that is trying to be bet, the bet will go through
+    public boolean placeBet(User user, double amount) {
+        if (user.getBalance() >= amount) {
+            user.setBalance(user.getBalance() - amount);
+            logTransaction(user, "Bet", amount);
+            return true;
+        }
+        return false; // not enough funds
+    }
+
+    //logs the transaction
+    private void logTransaction(User user, String type, double amount) {
+        System.out.println("Transaction Logged: User: " + user.getUsername() + ", Type: " + type + ", Amount: $" + amount);
+    }
+
 }
