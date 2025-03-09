@@ -5,6 +5,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SpendingLimitView extends JPanel {
+    private JTextField limitTF;
+    private JButton setLimitBtn;
+
     public SpendingLimitView() {
         setLayout(new BorderLayout());
         setBackground(new Color(25, 25, 25));
@@ -18,8 +21,8 @@ public class SpendingLimitView extends JPanel {
 
         JLabel label = new JLabel("Limit Amount: $");
         label.setForeground(Color.WHITE);
-        JTextField limitTF = new JTextField(10);
-        JButton setLimitBtn = new JButton("Set Limit");
+        limitTF = new JTextField(10);
+        setLimitBtn = new JButton("Set Limit");
         setLimitBtn.setBackground(new Color(50, 50, 50));
         setLimitBtn.setForeground(Color.WHITE);
 
@@ -41,4 +44,14 @@ public class SpendingLimitView extends JPanel {
         backBtn.addActionListener(e -> CasinoUI.showView("MainView"));
         return backBtn;
     }
+
+    // Getters for controller
+    public JTextField getLimitTextField() {
+        return limitTF;
+    }
+
+    public JButton getSetLimitButton() {
+        return setLimitBtn;
+    }
 }
+
