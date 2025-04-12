@@ -1,11 +1,17 @@
 package Controller;
 
+import Model.SpendingLimit;
 import Model.Transaction;
 import Model.User;
 
 public class TransactionController {
+    private SpendingLimit spendingLimit;
 
-   //
+    public TransactionController(SpendingLimit spendingLimit) {
+        this.spendingLimit = spendingLimit;
+    }
+
+     // analyzes transaction type and amount
     public boolean processTransaction(User user, Transaction transaction) {
         if (transaction == null || user == null) {
             return false; //false if input is invalid
