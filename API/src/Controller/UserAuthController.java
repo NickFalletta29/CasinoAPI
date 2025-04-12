@@ -1,15 +1,16 @@
 package Controller;
 
 import Model.User;
+import View.LoginView;
 import View.UserView;
 
 import javax.swing.*;
 
 public class UserAuthController {
     private User model;
-    private UserView view;
+    private LoginView view;
 
-    public UserAuthController(User model, UserView view) {
+    public UserAuthController(User model, LoginView view) {
         this.model = model;
         this.view = view;
     }
