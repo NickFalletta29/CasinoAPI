@@ -1,7 +1,6 @@
 package Controller;
 
 import Model.SpendingLimit;
-import Model.User;
 import View.SpendingLimitView;
 
 import javax.swing.*;
@@ -18,27 +17,37 @@ public class SpendingLimitController {
         this.view = view;
         this.currentUserId = userId;
 
-        view.getSetLimitButton().addActionListener(new ActionListener() {
+        // Finish button
+        view.getFinishButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setSpendingLimit();
+                applySpendingLimit();
             }
         });
     }
 
-    // Set spending limit from user input
-    private void setSpendingLimit() {
+
+    // makes sure spending limit entered is valid/not negative
+    private void applySpendingLimit() {
         try {
-            double limit = Double.parseDouble(view.getLimitTextField().getText());
+            double limit = view.getLimitAmount();
             if (limit < 0) {
                 JOptionPane.showMessageDialog(view, "Limit cannot be negative!", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
+
             model.setSpendingLimit(currentUserId, limit);
-            JOptionPane.showMessageDialog(view, "Spending limit set to $" + limit, "Success", JOptionPane.INFORMATION_MESSAGE);
+
+            // Optional: Display confirmation or save other settings
+            JOptionPane.showMessageDialog(view,
+                    "Spending limit of $" + limit + " set successfully!",
+                    "Success",
+                    JOptionPane.INFORMATION_MESSAGE);
+
         } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(view, "Invalid amount!", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(view, "Please enter a valid number.", "Input Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 }
+
 
