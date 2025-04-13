@@ -1,6 +1,4 @@
 # CasinoAPI
-Run code in CasinoUI view NOT Main Class!
-
 Log in credentials:
 Username: testUser
 Password: password123
