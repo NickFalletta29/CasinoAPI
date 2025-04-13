@@ -15,7 +15,7 @@ This weeks assignments: implementing design patterns and implementing another us
 
 #2 John Douglas - Added Function to SpendingLimitController, Spendinglimit, and SpendingLimitView
 
-#3 Taylor Smith - Implemented Observer and Wizard design patterns. Observer implemented in NotificationController, Wizard implemented in SpendingLimit, SpendingLimitController, CasinoUI.
+#3 Taylor Smith - Implemented Observer and Wizard design patterns. Observer implemented in NotificationController, UserView, CasinoUI. Wizard implemented in SpendingLimit, SpendingLimitController, SpendingLimitView, CasinoUI.
 
 #4 Nicholas Boyle - Updated .idea folder
 
