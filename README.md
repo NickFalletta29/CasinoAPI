@@ -1,5 +1,5 @@
 # CasinoAPI
-Run code in CasinoUI view!
+Run code in CasinoUI view NOT Main Class!
 
 Log in credentials:
 Username: testUser
@@ -9,7 +9,7 @@ Different API classes needed to be implemented in order to complete our online c
 
 This weeks assignments: implementing design patterns and implementing another use case
 
-## Team Member/ID and Contribution for M03-A04
+## Team Member/ID and Contribution for M03-A04 Design Patterns
 
 #1 Nick Falletta - 
 
@@ -21,7 +21,7 @@ This weeks assignments: implementing design patterns and implementing another us
 
 #5 Sam Bender -
 
-## Team Member/ID and Contribution for M03-A05
+## Team Member/ID and Contribution for M03-A05 'Implementing Manage User Profile Data'
 
 #1 Nick Falletta - 
 
