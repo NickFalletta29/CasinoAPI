@@ -11,24 +11,24 @@ This weeks assignments: implementing design patterns and implementing another us
 
 ## Team Member/ID and Contribution for M03-A04
 
-#1 Nick Falletta - Created the basics of all the Casino UIs (In Views folder)
+#1 Nick Falletta - 
 
-#2 John Douglas - Added Function to SpendingLimitController, Spendinglimit, and SpendingLimitView
+#2 John Douglas - 
 
 #3 Taylor Smith - Implemented Observer and Wizard design patterns. Observer implemented in NotificationController, UserView, CasinoUI. Wizard implemented in SpendingLimit, SpendingLimitController, SpendingLimitView, CasinoUI.
 
-#4 Nicholas Boyle - Updated .idea folder
+#4 Nicholas Boyle - 
 
 #5 Sam Bender -
 
 ## Team Member/ID and Contribution for M03-A05
 
-#1 Nick Falletta - Created the basics of all the Casino UIs (In Views folder)
+#1 Nick Falletta - 
 
-#2 John Douglas - Added Function to SpendingLimitController, Spendinglimit, and SpendingLimitView
+#2 John Douglas - 
 
 #3 Taylor Smith - Pecentage of effort: . Created LoginView screen and added userauthentication functionality through changes in User, UserAuthController, and CasinoUI.
 
-#4 Nicholas Boyle - Updated .idea folder
+#4 Nicholas Boyle - 
 
 #5 Sam Bender -
