@@ -27,7 +27,7 @@ This weeks assignments: implementing design patterns and implementing another us
 
 #2 John Douglas - Added Function to SpendingLimitController, Spendinglimit, and SpendingLimitView
 
-#3 Taylor Smith - Pecentage of effort: . Created LoginView screen and added userauthentication functionality.
+#3 Taylor Smith - Pecentage of effort: . Created LoginView screen and added userauthentication functionality through changes in User, UserAuthController, and CasinoUI.
 
 #4 Nicholas Boyle - Updated .idea folder
 
