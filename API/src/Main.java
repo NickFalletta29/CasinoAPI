@@ -48,13 +48,17 @@ public class Main {
         System.out.println("\nTesting Transactions: ");
         System.out.println("\nUser's current balance: " + testUser.getBalance());
         //deposit was suscessful, balance increases by 50
-        Transaction deposit = new Transaction("001", 50.0, "deposit");
-        boolean depositSuccess = transactionController.processTransaction(testUser, deposit);
+        TransactionController.TransactionCommand depositCmd =
+            transactionController.new DepositCommand(testUser, 50.0);
+        boolean depositSuccess = depositCmd.execute();
+
         System.out.println("Deposit Transaction Success: " + depositSuccess + " | New Balance: " + testUser.getBalance());
 
         //bet placed successfully, balance refelects that
-        Transaction bet = new Transaction("002", 30.0, "bet");
-        boolean betSuccess = transactionController.processTransaction(testUser, bet);
+        TransactionController.TransactionCommand betCmd =
+            transactionController.new BetCommand(testUser, 30.0);
+        boolean betSuccess = betCmd.execute();
+
         System.out.println("Bet Transaction Success: " + betSuccess + " | New Balance: " + testUser.getBalance());
 
         //bet transaction failed balance stays the same
