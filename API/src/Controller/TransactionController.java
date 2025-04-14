@@ -55,3 +55,32 @@ public class TransactionController {
     }
 
 }
+    public interface TransactionCommand {
+    boolean execute();
+}
+
+public class DepositCommand implements TransactionCommand {
+    private User user;
+    private double amount;
+    public DepositCommand(User user, double amount) {
+        this.user = user;
+        this.amount = amount;
+    }
+    @Override
+    public boolean execute() {
+        return deposit(user, amount);
+    }
+}
+
+public class BetCommand implements TransactionCommand {
+    private User user;
+    private double amount;
+    public BetCommand(User user, double amount) {
+        this.user = user;
+        this.amount = amount;
+    }
+    @Override
+    public boolean execute() {
+        return placeBet(user, amount);
+    }
+}
